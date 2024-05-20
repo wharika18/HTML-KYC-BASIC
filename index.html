@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <h4> KYC MANAGEMENT PORTAL</h4>
+    <h1>Add Customer</h1>
+    <form id="addCustomerForm" action=" /add-customer" method="post">
+        <label for="userName">Username:</label><br>
+        <input type="text" id="userName" name="userName"><br>
+        <label for="customerData">Customer Data:</label><br>
+        <input type="text" id="customerData" name="customerData"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Add Bank</h1>
+    <form id="addBankForm" action="/add-bank" method="post">
+        <label for="bankName">Bankname:</label><br>
+        <input type="text" id="bankName" name="bankName"><br>
+        <label for="address">ETH ADDRESS:</label><br>
+        <input type="text" id="bankAddress" name="bankAddress"><br><br>
+        <label for="RegNum">Reg Number:</label><br>
+        <input type="text" id="regNum" name="regNum"><br><br>
+        <label for="complaintsReported">COMPLAINT:</label><br>
+        <input type="text" id="complaint" name="complaint"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h1>UpVoteUser</h1>
+    <form action="/upVote" method="post">
+        <label for="UserName">Username:</label><br>
+        <input type="text" id="bankName" name="bankName"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>DownVoteUser</h1>
+    <form action="/downVote" method="post">
+        <label for="UserName">Username:</label><br>
+        <input type="text" id="bankName" name="bankName"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Check KYC Status</h1>
+    <form id="kycForm" onsubmit="return checkKycStatus(event)">
+        <label for="userName">Username:</label>
+        <input type="text" id="userName" name="userName" required>
+        <button type="submit">Check Status</button>
+    </form>
+
+    <p id="statusResult"></p>
+
+    <h1>Update KYC Status</h1>
+    <form id="updateKycForm" onsubmit="return updateKycStatus(event)">
+        <label for="userName">Username:</label>
+        <input type="text" id="userName" name="userName" required>
+        <button type="submit">Update Status</button>
+    </form>
+    <p id="updateResult"></p>
+
+    <script src="./App.js" type="module"></script>
+
+
+</body>
+
+
+
+</html>
